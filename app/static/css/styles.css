@@ -1,35 +1,104 @@
+/* styles.css */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #000000;
+    --footer-bg: #f8f9fa;
+    --footer-text: #000000;
+    --header-bg: linear-gradient(135deg, #6a11cb, #2575fc);
+    --scroll-btn-bg: #007bff;
+    --scroll-btn-hover: #0056b3;
+    --transition: all 0.3s ease;
+}
+
 body {
-    padding-bottom: 70px; /* Высота футера */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    transition: var(--transition);
+}
+
+.navbar .nav-link {
+    color: var(--navbar-text) !important;
+    transition: var(--transition);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    transition: var(--transition);
+}
+
+header {
+    background: var(--header-bg);
 }
 
 .btn-scroll {
-    position: fixed;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    z-index: 1000;
-    transition: opacity 0.3s;
-    background-color: #007BFF; /* Add background color for visibility */
-    color: white; /* Text color */
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-.btn-scroll-top {
-    bottom: 50%; /* Расположение кнопки "Вверх" */
-    opacity: 1;
-}
-
-.btn-scroll-bottom {
-    bottom: 40%; /* Расположение кнопки "Вниз" */
-    opacity: 1;
+    background-color: var(--scroll-btn-bg);
 }
 
 .btn-scroll:hover {
-    opacity: 1;
+    background-color: var(--scroll-btn-hover);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Темы */
+body.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #000000;
+    --footer-bg: #f8f9fa;
+    --scroll-btn-bg: #007bff;
+    --scroll-btn-hover: #0056b3;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --navbar-bg: #343a40;
+    --navbar-text: #ffffff;
+    --footer-bg: #343a40;
+    --header-bg: linear-gradient(135deg, #2c3e50, #3498db);
+    --scroll-btn-bg: #6c757d;
+    --scroll-btn-hover: #5a6268;
+}
+
+body.blue-theme {
+    --bg-color: #e0f7fa;
+    --text-color: #00796b;
+    --navbar-bg: #b2ebf2;
+    --navbar-text: #00796b;
+    --footer-bg: #b2ebf2;
+    --scroll-btn-bg: #00796b;
+    --scroll-btn-hover: #004d40;
+}
+
+body.orange-theme {
+    --bg-color: #fff3e0;
+    --text-color: #e65100;
+    --navbar-bg: #ffe0b2;
+    --navbar-text: #e65100;
+    --footer-bg: #ffe0b2;
+    --scroll-btn-bg: #e65100;
+    --scroll-btn-hover: #bf360c;
+}
+
+body.purple-theme {
+    --bg-color: #f3e5f5;
+    --text-color: #6a1b9a;
+    --navbar-bg: #e1bee7;
+    --navbar-text: #6a1b9a;
+    --footer-bg: #e1bee7;
+    --scroll-btn-bg: #6a1b9a;
+    --scroll-btn-hover: #4a148c;
 }
