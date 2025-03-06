@@ -153,41 +153,6 @@
             initThemeDropdown();
         });
 
-        // Оптимизированный код для тем
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-bs-theme', savedTheme);
-            updateActiveThemeIndicator(savedTheme);
-        }
-
-        function initThemeDropdown() {
-            document.querySelectorAll('.theme-option').forEach(item => {
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    setTheme(this.dataset.theme);
-                });
-            });
-        }
-
-        function setTheme(theme) {
-            document.documentElement.setAttribute('data-bs-theme', theme);
-            localStorage.setItem('theme', theme);
-            updateActiveThemeIndicator(theme);
-        }
-
-        function updateActiveThemeIndicator(theme) {
-            document.querySelectorAll('.theme-option').forEach(item => {
-                const checkIcon = item.querySelector('.bi-check2');
-                if(item.dataset.theme === theme) {
-                    if (!checkIcon) {
-                        item.insertAdjacentHTML('beforeend', '<i class="bi bi-check2 ms-auto"></i>');
-                    }
-                } else if (checkIcon) {
-                    checkIcon.remove();
-                }
-            });
-        }
-
         // Оптимизированная прокрутка
         function initScrollButtons() {
             const scrollTopBtn = document.getElementById('scrollToTopBtn');
