@@ -78,19 +78,6 @@
                     <li class="nav-item">
                         <a class="nav-link py-2 px-3 rounded" href="/glossary">Словарь</a>
                     </li>
-                    <li class="nav-item dropdown ms-2">
-                        <button class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown" title="Выбор темы">
-                            <i class="bi bi-palette"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item theme-option" data-theme="light" href="#"><i class="bi bi-sun me-2"></i>Светлая</a></li>
-                            <li><a class="dropdown-item theme-option" data-theme="dark" href="#"><i class="bi bi-moon-stars me-2"></i>Тёмная</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item theme-option" data-theme="blue" href="#"><i class="bi bi-droplet me-2"></i>Синяя</a></li>
-                            <li><a class="dropdown-item theme-option" data-theme="orange" href="#"><i class="bi bi-fire me-2"></i>Оранжевая</a></li>
-                            <li><a class="dropdown-item theme-option" data-theme="purple" href="#"><i class="bi bi-flower1 me-2"></i>Фиолетовая</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -99,10 +86,6 @@
     <main class="container my-5 pt-4">
         {% block content %}{% endblock %}
     </main>
-
-    <button id="scrollToTopBtn" class="btn-scroll" aria-label="Наверх">
-        <i class="bi bi-arrow-up"></i>
-    </button>
 
     <div class="modal fade" id="imageModal" tabindex="-1">
         <div class="modal-dialog modal-xl">
